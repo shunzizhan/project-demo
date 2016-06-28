@@ -1,0 +1,33 @@
+body {
+  background-color: #FFCCFF;
+}
+
+li {
+  position: relative;
+  list-style: none;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  left: -15px;
+}
+
+li.list-1::before {
+  background-image: url('../images/ico/list-1.png?__sprite');
+}
+
+li.list-2::before {
+  background-image: url('../images/ico/list-2.png?__sprite');
+}
+
+li.list-3::before {
+  background-image: url('../images/ico/quota_full.png?__sprite');
+}
+
+.containImg {
+  
+  background-image: url('../images/ico/list-1.png');
+}

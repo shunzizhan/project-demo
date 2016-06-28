@@ -1,0 +1,95 @@
+/*--------------------------------------------*\
+  覆盖 ui-dialog 的样式
+\*--------------------------------------------*/
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ui-dialog-grid{
+  // min-width: 200px;
+}
+.ui-dialog {
+  border: none;
+}
+.ui-dialog-title {
+  padding: 10px;
+}
+.ui-dialog-close {
+  top: 10px;
+}
+
+.ui-dialog-content .icon {
+  font-size: 36px;
+  margin-right: 10px;
+  float: left;
+}
+.ui-dialog-body{
+  padding: 15px;
+}
+.ui-dialog-content .msg {
+  // line-height: 36px;
+}
+.glyphicon{
+  width: 28px;
+  height: 28px;
+  background-size: 27px;
+}
+.ui-dialog-content .msg .glyphicon-exclamation-sign {
+  font-size: 36px;
+  margin-right: 10px;
+  float: left;
+  color: #d9534f;
+  &:before {
+    content: "\e101";
+  }
+  background: url(../images/ico/error.png) no-repeat;
+  background-size: 27px;
+}
+.ui-dialog-content .msg .glyphicon-info-sign {
+  font-size: 36px;
+  margin-right: 10px;
+  float: left;
+  color: #555;
+  background: url(../images/ico/info.png) no-repeat;
+  background-size: 27px;
+}
+.ui-dialog-content .msg .glyphicon-ok-sign {
+  font-size: 36px;
+  margin-right: 10px;
+  float: left;
+  color: #5cb85c;
+  background: url(../images/ico/success.png) no-repeat;
+  background-size: 27px;
+}
+.ui-dialog-content .msg .glyphicon-exclamation-sign,
+.ui-dialog-content .msg .glyphicon-info-sign,
+.ui-dialog-content .msg .glyphicon-ok-sign {
+  font-size: 2em;
+}
+
+.ui-dialog-content .msg .cont {
+  position: relative;
+  top: 4px;
+  font-family: 'Microsoft YaHei';
+}
+
+.ui-dialog-button{
+  float: none;
+  text-align: center;
+}
+.ui-dialog-footer button.ui-dialog-autofocus,
+.ui-dialog-footer button.ui-dialog-autofocus:hover,
+.ui-dialog-footer button.ui-dialog-autofocus:focus,
+.ui-dialog-footer button.ui-dialog-autofocus:active {
+  color: #ffffff;
+  background-color: @btn-main-hover;
+  border: 0;
+}

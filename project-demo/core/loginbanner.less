@@ -1,0 +1,148 @@
+
+/**
+ * shunzizhan 20160121
+ * 下拉登录样式
+ */
+@color-999 :#999;
+.dropdown-login{
+  position: fixed;
+  width: 292px;
+  padding: 26px 0 10px 0;
+  top: 60px;
+  left: 0px;
+  font-size: 14px;
+  background-color: @color-white;
+  border: 1px solid #cdcdcd;
+  -webkit-box-shadow: 0 0 8px #cdcdcd;
+  -moz-box-shadow: 0 0 8px #cdcdcd;
+  box-shadow: 0 0 8px #cdcdcd;
+  .group-item{
+    position: relative;
+    margin: 0 30px;
+    // line-height: 40px;
+    line-height: 30px;
+    // padding: 5px 0;
+    input{
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 30px 0 5px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      color: #666;
+      z-index: 9999;
+      border: 1px solid #ccc
+    }
+    .dropdown-placeholder{
+      position: absolute;
+      // top: 0;
+      top: 5px;
+      left: 5px;
+      color: #b1b1b1;
+      z-index: 0;
+    }
+    .dropdown-hide{
+      display: none;
+    }
+    .dropdown-user{
+      background: url(../images/dropdownlogin/user.png) no-repeat 96% 50%;
+    }
+    .dropdown-pwd{
+      background: url(../images/dropdownlogin/pwd.png) no-repeat 96% 50%;
+    }
+    .btn-dropdown-login{
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      // font-weight: bold;
+      color: #fff;
+      background-color: #0097ff;
+      cursor: pointer;
+      border: 0;
+    }
+    >p{
+      text-align: center;
+      margin-bottom: 2px;
+      color:@color-999;
+    }
+    .dropdown-3rd{
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 0 10px;
+      display: block;
+      cursor: pointer;
+      &.dropdown-QQ{
+        margin-left: 63px;
+        background: url(../images/dropdownlogin/QQ.png) no-repeat;
+      }
+      &.dropdown-WX{
+        background: url(../images/dropdownlogin/weixin.png) no-repeat 10%;
+      }
+      &.dropdown-WB{
+        background: url(../images/dropdownlogin/weibo.png) no-repeat;
+      }
+    }
+
+  }
+  .login-tips{
+    line-height: 22px;
+    // padding: 2px 0;
+    padding: 0;
+    color: @color-999;
+    >label{
+      float: left;
+      display: block;
+      padding-left: 25px;
+      background: url(../images/dropdownlogin/un-check.png) no-repeat 0% 50%;
+      cursor: pointer;
+    }
+    .dropdown-autologin{
+      background: url(../images/dropdownlogin/check.png) no-repeat 0% 50%;
+    }  
+    >a{
+      float: right;
+      color:@color-999;
+      margin-right: -5px;
+    }
+    .error{
+      display: block;
+      font-size: 12px;
+      color:#f00;
+      clear: both;
+    }
+  }
+}
+
+// shunzizhan 登录后的样式
+.ar-envelope-ico{
+  display: block;
+  margin-top: 18px;
+  width: 20px;
+  height: 20px;
+  background:url(../images/ico/mail.png) no-repeat;
+}
+.topbannerico{
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  vertical-align: middle;
+  background:url(../images/ico/uc-user-topbanner.png) no-repeat;
+}
+.ar-home-full-ico{
+  .topbannerico;
+  background-position: 0 0;
+}
+.ar-user-full-ico{
+  .topbannerico;
+  background-position: 0 -32px;
+}
+.ar-set-c-ico{
+  .topbannerico;
+  background-position: 2px -64px;
+}
+.ar-sign-out-ico{
+  .topbannerico;
+  background-position: 3px -96px;
+}
