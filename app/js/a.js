@@ -1,2 +1,2 @@
-var ss = "hello wrold";
-console.log(ss);
+var ss = "hello wrol11ssgsd";
+alert(ss)
