@@ -27,7 +27,7 @@ fis.set('version', '1.0.0');
 // 过滤指定的文件类型
 fis.set('project.files', [
   '*.css',
-  '*.js',
+  'js/**',
   'images/**',
   '*.html'
 ]);
