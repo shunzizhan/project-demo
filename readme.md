@@ -51,20 +51,26 @@ fis.set('domain_build', 'http://img3.fdc.com.cn');
 // 定义版本号
 fis.set('version', '1.0.0'); 
 
-// 排除指定目录和文件
-fis.set('project.ignore', [
-    '.git/**',
-    '.svn/**',
-    'node_modules/**',
-    '*.bat',
-    '*.cmd',
-    '*.log',
-    'fis-conf.js',
-    "package.json",
-    "**/___*.png" ,//过滤三下划线开头的预览图片
-    '**/*.less'
+// // 排除指定目录和文件
+// fis.set('project.files', [
+//     '.git/**',
+//     '.svn/**',
+//     'node_modules/**',
+//     '*.bat',
+//     '*.cmd',
+//     '*.log',
+//     'fis-conf.js',
+//     "package.json",
+//     "**/___*.png", //过滤三下划线开头的预览图片
+//     '**/*.less'
+// ]);
+// 过滤指定的文件类型
+fis.set('project.files', [
+  '*.css',
+  '*.js',
+  'images/**',
+  '*.html'
 ]);
-
 
 fis.match("*", {
         // domain: "${domain_pre}",
