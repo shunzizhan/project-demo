@@ -64,6 +64,7 @@ fis.set('version', '1.0.0');
 //     "**/___*.png", //过滤三下划线开头的预览图片
 //     '**/*.less'
 // ]);
+
 // 过滤指定的文件类型
 fis.set('project.files', [
   '*.css',

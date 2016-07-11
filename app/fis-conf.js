@@ -55,17 +55,35 @@ fis.match("*", {
             }
         })
     })
-    // 将less文件编译成css
-    .match('/css/*.less', {
+    // // 将less文件编译成css
+    // .match('/css/*.less', {
+    //     parser: fis.plugin('less'),
+    //     rExt: '.css'
+    // })
+    // .match('/less/(*.{css,less})', {
+    //     release: '/css/$1$2'
+    // })
+    // // 对css进行压缩，使用hash值，并合成雪碧图
+    // .match('/css/*.{less,css}', {
+    //     useHash: true,
+    //     useSprite: true,
+    //     optimizer: fis.plugin('clean-css')
+    // })
+
+    .match("/({css,less})/*.less", {
         parser: fis.plugin('less'),
         rExt: '.css'
     })
+    .match('/less/(*.{css,less})', {
+        release: '/css/$1$2'
+    })
     // 对css进行压缩，使用hash值，并合成雪碧图
-    .match('/css/*.{less,css}', {
-        useHash: true,
+    .match('/({css,less})/*.{less,css}', {
+        // useHash: true,
         useSprite: true,
         optimizer: fis.plugin('clean-css')
     })
+
     // 给图片添加hash值
     .match("::image", {
         useHash: true
@@ -77,7 +95,7 @@ fis.match("*", {
         })
     })
     // 将合成的雪碧图直接放在images/sprite文件中
-    .match('/css/(*.{png,gif})', {
+    .match('/({css,less})/(*.{png,gif})', {
       //发布到/images/sprite/xxx目录下
       release: '/images/sprite/$1$2'
     });
