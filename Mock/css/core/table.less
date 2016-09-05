@@ -1,0 +1,61 @@
+/*
+    table.less   表格相关
+ */
+
+table{
+  border-collapse:collapse;
+  td,th{
+    //ccj
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding:10px;
+  }
+  tr{
+    //ccj
+    // &.odd{
+    //   td,th{
+    //     background: @color-gray-lighter;
+    //   }
+    // }
+    &.even{
+      td,th{
+        // background: fadeout(@color-default, 85%);
+        background: fadeout(@color-black, 95%);
+      }
+    }
+  }
+  thead{
+    td,th{
+      background: fadeout(@color-default, 85%);
+    }
+  }
+  .t-l{
+    text-align: left;
+  }
+  .t-r{
+    text-align: right;
+  }
+}
+.table-a{
+  td,th{
+    border:1px solid @color-gray;
+  }
+  thead{
+    td,th{
+      border-top: 2px solid @color-default;
+      border-bottom-color: transparent;
+    }
+  }
+}
+.table-b{
+  td,th{
+    border-bottom:1px solid @color-gray;
+  }
+  thead{
+    td,th{
+      border-bottom-color: transparent;
+      font-weight: 800;
+    }
+  }
+}

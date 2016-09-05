@@ -1,0 +1,315 @@
+/*---------------------------------------*\
+  @home-banner-noroles
+  @function: 页面头部个人资料
+  @author: 张志成
+\*---------------------------------------*/
+@ie8-fix:~"\9";
+.home-banner-noroles{
+  width: 1200px;
+  background: url(../images/bg/home-head-back.png);
+  // background: url(../images/mask-login.png);
+  height: 0;
+  overflow: hidden;
+}
+.home-logined{
+  .head-img-box{
+    margin: 26px auto 0;
+    float: none;
+  }
+}
+.home-hide{
+  display: none;
+}
+.head-img-box{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 26px 0 0 508px; 
+  position: relative;     
+  float: left;                                                                                                                                                                                                                                                                                                                                                                                                                     
+  img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    border: 3px solid @color-white;
+    .radius(9999, 9999, 9999, 9999);
+  }
+  .head-over{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background: url(../images/tx-over.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+  }
+  .ico-rank{
+    position: absolute;
+    right: -16px;
+    top: 5px;
+    width: 38px;
+    height: 14px;
+    background: url(../images/ico/vip-rank.png) 0 0;
+    display: block;
+    z-index: 99;
+  }
+  .btn-edit{
+    position: absolute;
+    left: 13px;
+    bottom: 7px;
+    z-index: 8;
+    width: 100px;
+    height: 24px;
+    line-height: 20px;
+    .font(12);
+    color: @color-white;
+    background: url(../images/bg/edit-back.png) no-repeat;
+    background: url(../images/ico/edit-back.png) repeat@ie8-fix;
+    text-align: center;
+    display: none;
+    span{
+      display: inline-block;
+      line-height: 1;
+      margin-left: -3px;
+    }
+  }
+  .btn-edit-hover{
+    z-index: 9999;
+    background: none;
+  }
+  &:hover .btn-edit,&:hover.btn-edit-hover{
+    display: block;
+  }
+}
+.head-login-box{
+  margin: 64px 0 16px 22px;
+  float: left;
+  .font(14);
+  color:@font-light;
+  // font-weight: 700;
+  p{
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .btn-login{
+    width: 81px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: #559fd4;
+    padding: 0;
+    margin: 0;
+    &:active{
+      background: darken(#99d4ff, 15%);
+    }
+  }
+}
+.home-user-name{
+  text-align: center;
+  .font(16);
+  // font-weight: 700;
+  margin: 10px 0 11px 0;
+  color: @font-light;
+}
+.member-info{
+  text-align: center;
+  .ar{
+    margin-right: 8px;
+    .font(14);
+  }
+}
+.member-info-list{
+  color: @font-light;
+  .font(12);
+  margin: 0 14px;
+  cursor: default;
+  // font-weight: 700;
+  .integral,.ku-coin{
+    font-style: normal;
+  }
+  &:hover{
+    color: @color-main;
+    // text-decoration: underline;
+    .rate-1{
+      background-position: -123px -59px;
+    }
+    .rate-2{
+      background-position: -123px 0;
+    }
+    .rate-3{
+      background-position: -123px -30px;
+    }
+    .rate-4{
+      background-position: -123px -88px;
+    }
+  }
+}
+.member-safety-rate{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+  width: 108px;
+  height: 13px;
+  background: url(../images/ico/rate.png) no-repeat 0 -59px;
+}
+.rate-1{
+  background-position: 0 -59px;
+}
+.rate-2{
+  background-position: 0 0;
+}
+.rate-3{
+  background-position: 0 -30px;
+}
+.rate-4{
+  background-position: 0 -88px;
+}
+
+/*错误页面样式*/
+.error-page{
+  background: url(../images/bg/error404.png) center #fff !important;
+  p{
+    text-align: center;
+    padding-top: 160px;
+    font-size: 16px;
+  }
+  .error-link{
+    color: #00f;
+  }
+}
+
+/*---------------------------------------*\
+  @personal-info-wrapper
+  @function: 页面左侧顶部个人资料
+    @author: ccj
+\*---------------------------------------*/
+.personal-info-wrapper {
+  // display: -webkit-flex;
+  // display: flex;
+  // justify-content: space-between;
+  .avatar-box {
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 80px;
+    // height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    .avatar {
+      // width: 100%;
+      // height: 100%;
+      width: 78px;
+      height: 78px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+    .opacity,
+    .edit-info {
+      position: absolute;
+      bottom: 4px;
+      *bottom: 2px;
+      *left: 0;
+      display: block;
+      width: 103%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      border-radius: 0 0 5px 5px;
+      & a {
+        color: @color-white;
+      }
+    }
+    .opacity {
+      background-color: gray;
+      filter: alpha(opacity=50);
+      -khtml-opacity: 0.5;   
+        -moz-opacity: 0.5; 
+             opacity: 0.5;
+    }
+  }
+  .info-box {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    // width: 180px;
+    // padding-left: 20px;
+    width: 157px;
+    margin-left: 20px;
+    font-size: 14px;
+    vertical-align: top;
+  }
+}
+
+  .info-box {
+    .user-info {
+      height: 16px;
+      line-height: 16px;
+      .user-name {
+        cursor: default;
+        max-width: 130px;
+        .ellipsis();
+      }
+    }
+    .integral-box {
+      padding: 10px 0;
+      .integral-title {
+        margin-right: 20px;
+      }
+      .integral {
+        font-style: normal;
+        color: @color-default;
+      }
+      .ku-coin {
+        font-style: normal;
+        color: @color-main;
+      }
+    } 
+    .safety-box {
+      position: relative;
+      height: 18px;
+      line-height: 18px;
+      border-radius: 5px;
+      font-size: 12px;
+      color: gray;
+      // background-color: @color-white;
+      // background: url(../images/ico/rate-1.png) no-repeat;
+      .safety-grade {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        height: 100%;
+        text-align: left;
+        &.grade2 {
+          width: 50%;
+          // background: orange;
+          // background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        }
+      }
+      .safety-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // transform: translate(-50%, -50%);
+        margin-top: -6px;
+        margin-left: -24px;
+        color: gray;
+        line-height: 1;
+      }
+    }
+    .safety-1{
+      background: url(../images/ico/rate-1.png) no-repeat;
+    }
+    .safety-2{
+      background: url(../images/ico/rate-2.png) no-repeat;
+    }
+    .safety-3{
+      background: url(../images/ico/rate-3.png) no-repeat;
+    }
+    .safety-4{
+      background: url(../images/ico/rate-4.png) no-repeat;
+    }
+  }
