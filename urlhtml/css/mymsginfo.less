@@ -1,0 +1,159 @@
+
+@333 : #333;
+@ccc : #ccc;
+@black : #000;
+@white : #fff;
+@efefef : #efefef;
+button{
+  background: #f0f;
+}
+.dialog-warp{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:40%;
+  left:0;
+  text-align: center;
+  .dialog-body{
+    // position: fixed;
+    // margin: -20px auto 0;
+    margin: 0 auto;
+    // max-width: 400px;
+    display: table;
+    line-height: 30px;
+    padding: 5px 10px;
+    border: 1px solid @ccc;
+    border-radius: 4px;
+    .info-ico{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      // background:url(../images/dialog-ico/dialog_ico.png);
+      vertical-align: middle;
+      &.ico-success{
+        background:url('../images/success.png?__sprite');
+        // background-position: 28px 0;
+      }
+      &.ico-info{
+        background:url('../images/dialog-ico/info.png?__sprite');
+        // background-position: 56px 0;
+      }
+      &.ico-error{
+        background:url('../images/dialog-ico/error.png?__sprite');
+        // background-position: 0 0;
+      }
+    }
+    .info-msg{
+      display: inline-block;
+      margin: 0 0 0 5px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+  }
+}
+.confirm-warp{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 38%;
+  left: 50%;
+  .confirm-mask{
+    opacity: 0.5;
+    filter:alpha(opacity=50); 
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    background:@black;
+  }
+  .confirm-body{
+    position: absolute;
+    margin: 0 auto;
+    width: 220px;
+    margin-left: -110px;
+    line-height: 30px;
+    // padding: 5px 10px;
+    border: 1px solid @ccc;
+    border-radius: 4px;
+    background-color: @white;
+    z-index: 100000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 256px rgba(255, 255, 255, .3);
+    .confirm-head{
+      padding: 5px 10px;
+      border-bottom: 1px solid #E5E5E5;
+      .confirm-headtx{
+        color: @333;
+        font-weight: bold;
+      }
+      i.confirm-cancel{
+        float: right;
+        padding: 0 4px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        opacity: 0.2;
+        filter:alpha(opacity=20); 
+        cursor: pointer;
+        font-style: normal;
+        &:hover{
+          text-decoration: none;
+          opacity: .5;
+          filter:alpha(opacity=50); 
+        }
+      }
+    }
+    .confirm-content{
+      padding: 8px 10px;
+      line-height: 22px;
+      text-indent: 20px;
+      font-size: 16px;
+      font-family: Helvetica, arial, sans-serif;
+    }
+    .confirm-footer{
+      text-align: center;
+      margin-bottom: 10px;
+      .confirm-btn{
+        // border-radius: 4px;
+        line-height: 25px;
+        padding: 2px 12px;
+        color: @333;
+        outline: none;
+        border: 1px solid @ccc;
+        background-color: @white;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        &.confirm-ok{
+          border: 1px solid #07c;
+          background-color: #07c;
+          color:@white;
+        }
+        &.confirm-cancel{
+          margin-left: 20px;
+          &:hover{
+            background-color: #ddd;
+          }
+        }
+      } 
+    }
+  }  
+}
+.loading-warp{
+  // background: url(../images/dialog-ico/lod.gif);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  background-color: @ccc;
+  opacity: .2;
+  filter:alpha(opacity=20); 
+  .loading-content{
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background: url(../images/dialog-ico/loading.gif) no-repeat;
+  }
+}

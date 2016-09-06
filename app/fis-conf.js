@@ -55,6 +55,12 @@ fis.match("*", {
             }
         })
     })
+    // 对gtml进行压缩
+    // npm install -g fis-optimizer-html-minifier
+    .match('*.html', {
+      //invoke fis-optimizer-html-minifier
+      optimizer: fis.plugin('html-minifier')
+    })
     // // 将less文件编译成css
     // .match('/css/*.less', {
     //     parser: fis.plugin('less'),

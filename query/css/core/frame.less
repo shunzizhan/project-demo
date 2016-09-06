@@ -1,0 +1,33 @@
+/*---------------------------------------*\
+  @my-favor
+  @function: 我的关注(活动)模块
+    @author: ccj
+\*---------------------------------------*/
+.my-favor {
+  // display: -webkit-flex;
+  // display: flex;
+  // justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0;
+  .aside,
+  .my-focus {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+  .aside {
+    width: 25%;
+    margin-right: 2%;
+    .personal-info-wrapper {
+      height: 80px;
+      padding: 30px 20px;
+      margin-bottom: 10px;
+      background-color: @color-white;
+    }
+  }
+  .my-focus {
+    width: 73%;
+    vertical-align: top;
+    background-color: @color-white;
+  }
+}
