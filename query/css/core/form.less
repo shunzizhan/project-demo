@@ -1,0 +1,169 @@
+/*
+  form.less  表单样式文件
+ */
+//搜索框组
+.search{
+  padding: 15px 60px 0 0;
+  z-index: 8;
+  .search-box{
+    height: 38px;
+    background: @color-white;
+    border: 1px solid @color-gray;
+    width: 540px;
+    position: relative;
+    input{
+      border:none;
+      padding: 0 10px;
+      line-height: 38px;
+      width: 415px;
+      height: 38px;
+    }
+    .btn{
+      padding: 0;
+      width: 85px;
+      height: 40px;
+      position: absolute;
+      line-height: 38px;
+      top:-1px;
+      right:-1px;
+      margin: 0;
+      .font(14);
+    }
+  }
+  &.search-sm{
+    .search-box{
+      height: 24px;
+      width: 270px;
+      input{
+        line-height: 24px;
+        width: 180px;
+        height: 24px;
+      }
+      .btn{
+        width: 70px;
+        height: 26px;
+        line-height: 26px;
+        background: @color-gray-light;
+        border-color: @color-gray;
+        color:@font-color;
+        .font(12);
+        &:hover{
+          background: @color-gray;
+        }
+      }
+    }
+  }
+}
+//input
+input{
+  border:1px solid @color-gray;
+  background-color: @color-white;
+  outline: none;
+}
+label.text{
+  line-height: 30px;
+  input{
+    padding: 0 10px;
+    line-height: 28px;
+    height: 28px;
+  }
+  &.text-xs{
+    line-height: 25px;
+    input{
+      width: 110px;
+      line-height: 23px;
+      height: 23px;
+    }
+  }
+}
+//textarea
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+  line-height: 20px;
+  width: 98%;
+  height: 60px;
+  padding: 10px;
+  margin: 10px auto;
+  border:1px solid @color-gray;
+  display: block;
+  max-height:150px;
+  min-height:20px;
+  outline: none;
+}
+//select
+label.select{
+  display: inline-block;
+  line-height: 28px;
+  padding: 0 10px;
+  height: 28px;
+  width: 120px;
+  border:1px solid @color-gray;
+  background-color: @color-white;
+  .font(12);
+  .arrow;
+  position: relative;
+  span{
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+  }
+  &::after{
+    right: 10px;
+  }
+  &:hover::after{
+    .rotate(0deg);
+  }
+  .option{
+    display: none;
+    position: absolute;
+    top: 29px;
+    border: 1px solid @color-gray;
+    border-top: none;
+    width: 100%;
+    left: -1px;
+    overflow: hidden;
+    overflow-y:auto;
+    max-height: 180px;
+    background: @color-white;
+    z-index: 99;
+    li{
+      line-height: 30px;
+      padding:0 10px;
+      cursor: pointer;
+      &:hover{
+        background: @color-gray-lighter;
+      }
+    }
+  }
+  &.select-xs{
+    width: 80px;
+    padding: 0 8px;
+    line-height: 23px;
+    height: 23px;
+    &::after{
+      right: 8px;
+    }
+    .option{
+      top:24px;
+    }
+  }
+  &.select-sm{
+    width: 50px;
+    padding: 0 6px;
+    line-height: 18px;
+    height: 18px;
+    &::after{
+      right: 6px;
+    }
+    .option{
+      top:19px;
+    }
+  }
+  &.select-auto{
+    width: auto;
+    padding: 0 10px;
+    padding-right: 25px;
+  }
+}

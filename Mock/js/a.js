@@ -19,5 +19,4 @@ var getTestDataFromJs = function(){
   });
   
 }
-
 getTestDataFromJs();

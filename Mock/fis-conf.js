@@ -9,7 +9,9 @@ fis.set('domain_pre', 'http://preuc.fdc.com.cn');
 // 线上环境
 fis.set('domain_build', 'http://img3.fdc.com.cn'); 
 // 定义版本号
-fis.set('version', '1.0.0'); 
+fis.set('version', '1.0.0');
+
+fis.set('uc_url', 'http://test.uc.fdc.com.cn');
 
 // // 排除指定目录和文件
 // fis.set('project.files', [
@@ -114,7 +116,10 @@ fis.match("*", {
 fis.media('test')
     .match("*", {
         domain: "${domain_test}",
-    });
+    })
+    .match('*.html',{
+
+    })
 
 // 预发布
 fis.media('pre')
