@@ -105,18 +105,55 @@ fis.match("*", {
     //   //发布到/images/sprite/xxx目录下
     //   release: '/images/sprite/$1$2'
     // });
-
+var config = {
+  // 常量替换
+  defines: {
+    'shunzizhan': JSON.stringify('hello world'),
+    'FUN': function() {
+      console.log('fun');
+    },
+    OBJECT: {
+      shunzizhan: 'hello world',
+      b: 'b',
+      c: 'c'
+    },
+    STR: JSON.stringify('i am comming !'),
+    NULL: null,
+    UNDEFINED: undefined,
+    TEST: 'window.test'
+  },
+  // 正则替换
+  replacers: [
+    {
+      pattern: 'shunzizhan !',
+      replacer: 'HELLO WORLD !'
+    },
+    {
+      pattern: /hello ([ABCD]) ([ABCD]) ([ABCD]) ([ABCD]) !/ig,
+      replacer: function($0, $1, $2, $3, $4) {
+        return 'hello ' + $1 + ' `I AM B` ' + $3 + ' ' + $4 + ' !';
+      }
+    }
+  ]
+};
 // 测试开发
 fis.media('test')
     .match("*", {
         domain: "${domain_test}",
-    })
-    .match('*.html',{
-      postprocessor:fis.plugin('html-replace', {
-          //conf
-          alert(12);
-      })
     });
+    // .match('*.html',{
+    //   postprocessor:fis.plugin('html-replace', {
+    //       //conf
+    //       alert(12);
+    //   })
+    // });
+fis.media('test', {
+  preprocessor: fis.plugin('define', {
+    defines: {
+      'shunzizhan': JSON.stringify('hello world')
+    }
+  })
+});
 
 // 预发布
 fis.media('pre')
