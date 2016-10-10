@@ -1,1 +1,0 @@
-fis3 release build --verbose -cd ../build 
