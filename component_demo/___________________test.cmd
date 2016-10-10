@@ -1,1 +1,0 @@
-fis3 server stop && fis3 server clean && fis3 server start -p 1234 && fis3 release test --verbose -wLc
