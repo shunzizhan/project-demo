@@ -2,7 +2,7 @@
 
 var getTestData = function(){
   $.ajax({
-    url: 'api/user',
+    url: '/api/user',
     type: 'GET',
     dataType: 'json',
     // data: {param1: 'value1'},
@@ -20,4 +20,4 @@ var getTestData = function(){
   
 }
 
-// getTestData();
+getTestData();

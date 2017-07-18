@@ -1,21 +1,21 @@
 
 var getTestDataFromJs = function(){
   $.ajax({
-    url: 'api/dynamic/time',
+    url: '/api/dynamic/time',
     type: 'GET',
-    dataType: 'json',
+    dataType: 'text',
     // data: {param1: 'value1'},
   })
   .done(function(res) {
-    console.log("success");
-    // console.log(res);
-    console.log(res.data.uname+">>"+res.data.uid);
+    console.log(res);
+    console.log(res);
+    // console.log(res.data.uname+">>"+res.data.uid);
   })
   .fail(function(res) {
-    console.log("error");
+    console.log(res);
   })
   .always(function(res) {
-    console.log("complete");
+    console.log(res);
   });
   
 }

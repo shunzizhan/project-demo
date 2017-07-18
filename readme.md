@@ -8,14 +8,14 @@
 
 [TOC]
 
-## 实践：由grunt转变为fis
+## 实践：由grunt转变为fis 
 
 >为了更加方便快速的实现`打包部署`，我们决定尝试使用fis来实现项目的自动化。此外，前端后期计划采用`组件化开发模式`，实现项目前端的`高度解耦`，提供代码的`可复用性`。
 >**说明：**我们短时间内保持文件目录与原来一致，以便大家对fis有一个感性的认知。
 >
 讲解示例[demo](https://github.com/shunzizhan/fis/tree/develop/project-demo/src) https://github.com/shunzizhan/fis/tree/develop/project-demo/src
 
-### 安装fis及fis常用插件
+### 安装fis及fis常用插件 
 ``` cmake
   npm install -g fis3
   npm install -g fis-parser-less

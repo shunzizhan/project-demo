@@ -110,6 +110,12 @@ fis.match("*", {
 fis.media('test')
     .match("*", {
         domain: "${domain_test}",
+        deploy: [
+          fis.plugin('skip-packed', {
+            // 配置项
+            skipPackedToCssSprite:true
+          })
+        ]
     });
 
 // 预发布

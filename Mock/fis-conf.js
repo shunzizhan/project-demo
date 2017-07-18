@@ -1,5 +1,5 @@
 // 保持发布使用相对路径
-fis.hook('relative'); 
+// fis.hook('relative'); 
 
 //域
 // 测试环境
